@@ -1,0 +1,314 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main.programming-page,
+main.primeengine-page {
+    height: auto;
+    min-height: calc(100vh - 100px);
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+.programming-page {
+    padding: 24px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero-project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "text button"
+        "media media"
+        "captions captions";
+    gap: 18px 24px;
+    align-items: start;
+    padding: 8px 0 18px;
+}
+
+.hero-text {
+    grid-area: text;
+}
+
+    .hero-text h1 {
+        font-size: 54px;
+        line-height: 1;
+        margin-bottom: 10px;
+        font-weight: 800;
+        color: white;
+    }
+
+    .hero-text p {
+        font-size: 22px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+.hero-more-btn {
+    grid-area: button;
+    align-self: center;
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 18px 30px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #5d84e8, #4f74db);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+    .hero-more-btn:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+    }
+
+.hero-media-row {
+    grid-area: media;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 6px;
+}
+
+.hero-media-box {
+    aspect-ratio: 16 / 9;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+    .hero-media-box img,
+    .hero-media-box video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        background: transparent;
+    }
+
+.hero-captions {
+    grid-area: captions;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+    .hero-captions span {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+    }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    min-height: 430px;
+    padding: 22px 18px 18px;
+    display: grid;
+    grid-template-rows: auto auto auto auto 1fr auto;
+    gap: 10px;
+    background: rgba(17, 43, 130, 0.34);
+    border-top: 6px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 6px solid rgba(255, 255, 255, 0.18);
+}
+
+    .project-card h2 {
+        font-size: 30px;
+        line-height: 1.05;
+        font-weight: 800;
+        color: white;
+    }
+
+.project-tagline {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.project-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+    .project-media img,
+    .project-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .project-media.contain img,
+    .project-media.contain video,
+    .modal-media-item.contain img,
+    .modal-media-item.contain video {
+        object-fit: contain;
+        background: transparent;
+    }
+
+.project-description {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 600;
+    color: white;
+    align-self: end;
+}
+
+.see-more-btn {
+    justify-self: start;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5d84e8, #4f74db);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+    .see-more-btn:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+    }
+
+
+video {
+    transform: none !important;
+}
+
+.media-hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+    .media-hover video,
+    .media-hover .media-thumb {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: opacity 0.18s ease;
+        object-fit: cover;
+    }
+
+    .media-hover.contain video,
+    .media-hover.contain .media-thumb {
+        object-fit: contain;
+        background: transparent;
+    }
+
+    .media-hover video {
+        opacity: 0;
+    }
+
+    .media-hover.playing video {
+        opacity: 1;
+    }
+
+    .media-hover.playing .media-thumb {
+        opacity: 0;
+    }
+
+@media (max-width: 900px) {
+    .programming-page {
+        padding: 18px 18px 32px;
+        gap: 24px;
+    }
+
+    .hero-project {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text"
+            "button"
+            "media"
+            "captions";
+    }
+
+    .hero-more-btn {
+        justify-self: start;
+        margin-top: 6px;
+    }
+
+    .hero-media-row,
+    .hero-captions {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-media-box {
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-captions span {
+        text-align: left;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+    .modal-media-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-media-box,
+.project-media,
+.media-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    will-change: transform;
+}
+
+    .hero-media-box:hover,
+    .project-media:hover,
+    .media-hover:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-media-box video,
+    .project-media video,
+    .media-hover video {
+        transition: opacity 0.18s ease, transform 0.25s ease;
+    }
+
+    .hero-media-box:hover video,
+    .project-media:hover video,
+    .media-hover:hover video {
+        transform: scale(1.02);
+    }
+
+.hero-more-btn.internal-link, .see-more-btn.internal-link {
+    background: linear-gradient(45deg, #5d84e8, #4f74db);
+}
+
+.hero-more-btn.external-link, .see-more-btn.external-link {
+    background: linear-gradient(45deg, #e67e22, #d35400);
+}

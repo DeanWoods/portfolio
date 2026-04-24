@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeEngine | Dean Woods</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo interactive-lift">DEAN WOODS</a>
+
+        <div class="tagline">Game Programmer</div>
+
+        <div class="nav-buttons">
+            <a href="programming.html" class="btn blue">Programming</a>
+            <a href="design.html" class="btn purple">Design</a>
+        </div>
+    </header>
+
+    <main class="case-page">
+
+        <div class="case-hero-left">
+            <h1>PrimeEngine</h1>
+
+            <p class="case-tagline">
+                PrimeEngine is a custom C++ engine with Lua scripting. Building on a base engine by Artem Kovalovs, I extended the rendering pipeline, animation system, physics integration, event architecture, and developer tooling.
+            </p>
+
+            
+        </div>
+
+
+        <section class="case-section case-gallery">
+            <h2>Gallery</h2>
+
+            <div class="case-gallery-grid">
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-frustum.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Frustum Culling</strong>
+                        <div class="details">
+                            Implemented view frustum culling to prevent off-camera objects from entering the render pipeline. This demo visualizes culling; in stress scenes frustum filtering improved performance from ~30 → 60 FPS.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-animation.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Animation Blending</strong>
+                        <div class="details">
+                            Implemented animation blending and weighted state transitions. Demonstrates blending between locomotion states and layered animation channels.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-physics.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Physics & Collision</strong>
+                        <div class="details">
+                            Implemented gravity, collision detection, and surface sliding. Collision resolution uses surface normals to enable smooth gliding along geometry.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-occlusion.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Occlusion Culling</strong>
+                        <div class="details">
+                            Implemented an occlusion pass to reduce hidden surface rendering; occlusion produced limited gains in this scene, indicating further optimization is needed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-aiming.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Targeting & Orientation</strong>
+                        <div class="details">
+                            Implemented object targeting and orientation references for dynamic rotation toward other entities.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-waypoints.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Waypoint Navigation</strong>
+                        <div class="details">
+                            Implemented waypoint-based navigation allowing entities to travel to specified destinations, either randomly or intentionally.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-events.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Lua Event System</strong>
+                        <div class="details">
+                            Added onto a Lua-driven event system enabling scripted interactions; example shows chained events triggering actions and retreats based on distance.
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="case-gallery-item">
+                    <video controls>
+                        <source src="media/CSCI522-toggle-demo.webm" type="video/webm">
+                    </video>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Rendering Toggle Demo</strong>
+                        <div class="details">
+                            Toggle frustum and occlusion culling to compare rendering impact across configurations.
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

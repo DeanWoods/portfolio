@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move It! | Dean Woods</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo interactive-lift">DEAN WOODS</a>
+
+        <div class="tagline">Game Programmer and Designer</div>
+
+        <div class="nav-buttons">
+            <a href="programming.html" class="btn blue">Programming</a>
+            <a href="design.html" class="btn purple">Design</a>
+        </div>
+    </header>
+
+    <main class="case-page">
+
+        <div class="case-hero-left">
+            <h1>Move It!</h1>
+
+            <p class="case-tagline">
+                “Move It!” is a timed 2D puzzle platformer where the player is the platform, guiding an object to goals through perilous terrain using both strategy and skill.
+            </p>
+
+            <div class="case-buttons">
+                <a href="https://docs.google.com/document/d/16L_JpboeK5AZSHWjztVv1v-t5oQqw897GRWMDQPnZNw/edit?usp=drive_link"
+                   class="btn resume"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GDD
+                </a>
+
+                <a href="https://deanwoods.github.io/github.io-MoveIt-gold-build/"
+                   class="btn resume"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Play on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="case-hero-right">
+            <img src="media/MoveItSC1.png" alt="Move It cover image">
+        </div>
+
+        <section class="case-section case-overview">
+            <h2>Overview</h2>
+            <ul>
+                <li>Led my team to create a level pipeline and quick implementation of unique challenges for the player</li>
+                <li>Created concept and core mechanics</li>
+                <li>Designed and implemented 5 / 8 supporting mechanics</li>
+                <li>Designed and implemented 36 / 44 levels</li>
+                <li>Iterated on levels based on gathered player analytics</li>
+            </ul>
+        </section>
+
+        <section class="case-section case-iteration">
+            <h2>Level Iteration</h2>
+            <ul>
+                The below section demonstrates my approach to level changes based on playtest data.
+                <br />
+                More information can be found near the end of our GDD.
+            </ul>
+        </section>
+
+        <section class="case-section case-gallery">
+            <h2>Gallery</h2>
+
+            <div class="case-gallery-grid moveit-grid">
+
+                <!-- BEFORE -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItBefore1.png" alt="Before">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Before</strong>
+                        <div class="details">The intended solution is for the player to go over the center platform.</div>
+                    </div>
+                </div>
+
+                <!-- DATA -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItData1.png" alt="Data">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Data</strong>
+                        <div class="details">The data indicated that the majority of players would attempt to go under the platform, resulting in a loss.</div>
+                    </div>
+                </div>
+
+                <!-- AFTER -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItAfter1.png" alt="After">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>After</strong>
+                        <div class="details">The middle platform was tilted up to give the player more time, and moved right to make it easier to go under. This design accommodates both solutions, over and under. </div>
+                    </div>
+                </div>
+
+                <!-- BEFORE -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItBefore2.png" alt="Before">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Before</strong>
+                        <div class="details">The intended solution is for the player to weave right, then push the jump box to the left.</div>
+                    </div>
+                </div>
+
+                <!-- DATA -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItData2.png" alt="Data">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Data</strong>
+                        <div class="details">The data indicated that most players would try to do this, but still suffered a high loss rate. This meant that even if the players knew what they were doing strategically, they were suffering from lack of skill.</div>
+                    </div>
+                </div>
+
+                <!-- AFTER -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItAfter2.png" alt="After">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>After</strong>
+                        <div class="details">We slightly modified the starting position of the jump box and increased the amount of time given to the player from 6 to 10 seconds. The goal was to give a little bit more leniency in the skill area (while not making it too easy) and reward their correct strategy.</div>
+                    </div>
+                </div>
+
+                <!-- BEFORE -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItBefore3.png" alt="Before">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Before</strong>
+                        <div class="details">
+                        Intended Solution: Weave down, push jump box left, go back up, push flag down
+                            <br />
+                            Alternate Solution: Weave down, push jump box right, avoid ball and allow it to bounce to upper platform.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATA -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItData3.png" alt="Data">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>Data</strong>
+                        <div class="details">A majority of players would go for the alternate solution, and lose because it was more difficult to execute. Not many tried to push the flag, and those that did still sometimes lost because they'd be too late.</div>
+                    </div>
+                </div>
+
+                <!-- AFTER -->
+                <div class="case-gallery-item">
+                    <div class="case-gallery-media">
+                        <img src="media/MoveItAfter3.png" alt="After">
+                    </div>
+                    <div class="meta" style="margin-top:10px;">
+                        <strong>After</strong>
+                        <div class="details">
+                            Changes:
+
+                                <li>Pushing the platform right: this made weaving easier for the intended solution, and gave an easier gap for the ball to bounce up through in the alternate solution. </li>
+                                <li>Added wall on the right: this made solution 1 more attainable, and created a gap on the right that made the flag solution more obvious.</li>
+                                <li>Making the flag a different color: made it clear that this was a pushable flag, and that it is likely part of the solution. This applied to all push-flag levels.</li>                      
+                                <li>Increased time from 4.5 to 6 seconds: made both solutions a bit easier.</li>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

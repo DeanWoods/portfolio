@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dean Woods | Programming</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="programming.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+
+    <header>
+        <a href="index.html" class="logo interactive-lift">DEAN WOODS</a>
+
+        <div class="tagline">Game Programmer</div>
+
+        <div class="nav-buttons">
+            <a href="programming.html" class="btn blue current-page">Programming</a>
+            <a href="design.html" class="btn purple">Design</a>
+        </div>
+    </header>
+
+    <main class="programming-page">
+        <section class="hero-project">
+            <div class="hero-text">
+                <h1>PrimeEngine</h1>
+                <p>Features added by me to Artem Kovalovs' PrimeEngine.</p>
+
+            </div>
+
+            <a href="primeengine.html" class="hero-more-btn internal-link">More PrimeEngine</a>
+
+            <div class="case-hero-left">
+                <p class="case-tagline">
+                    Artem Kovalovs is a Principal Graphics and Game Programmer for Naughty Dog, and an adjunct professor at USC. This project was for his graduate course "Game Engine Development."
+                </p>
+            </div>
+
+            <div class="hero-media-row">
+                <div class="hero-media-box">
+                    <video src="media/CSCI522-frustum.webm" muted loop playsinline></video>
+                </div>
+
+                <div class="hero-media-box">
+                    <video src="media/CSCI522-animation.webm" muted loop playsinline></video>
+                </div>
+
+                <div class="hero-media-box">
+                    <video src="media/CSCI522-physics.webm" muted loop playsinline></video>
+                </div>
+            </div>
+
+            <div class="hero-captions">
+                <span>View Frustum Culling</span>
+                <span>Animation Blending</span>
+                <span>Physics and Collision</span>
+            </div>
+        </section>
+
+        <section class="project-grid">
+            <article class="project-card">
+                <h2>Move It!</h2>
+                <p class="project-tagline">“Move It!” is a timed 2D puzzle platformer where the player is the platform, guiding an object to goals through perilous terrain.</p>
+                <div class="project-media contain">
+                    <img src="media/MoveItSC1.png" alt="Move It Screenshot">
+                </div>
+                <p class="project-description">
+                    Team Size: 5 people
+                    <br />
+                    Length: 3 months
+                    <br />
+                    My Roles: Team Captain, Programmer, Level Designer
+                </p>
+                <a href="moveit.html" class="see-more-btn internal-link">See more</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Open Your Browser</h2>
+                <p class="project-tagline">Open Your Browser contains numerous 2D minigames, ranging from point-and-click to bullet hell.</p>
+                <div class="project-media">
+                    <div class="media-hover contain">
+                        <img class="media-thumb" src="media/OYBcover2.png" alt="Open Your Browser thumbnail">
+                        <video src="media/OYBtrailer.webm" muted loop playsinline preload="metadata"></video>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Team Size: 60 people
+                    <br />
+                    Length: 3 months
+                    <br />
+                    My Roles: Programmer, Programming Mentor
+                </p>
+                <a href="openyourbrowser.html" class="see-more-btn internal-link">See more</a>
+            </article>
+        </section>
+
+        <!--<section class="project-grid">
+            <article class="project-card">
+                <h2>HyperDrift Hazard</h2>
+                <p class="project-tagline">A fast-paced 3D racing game where you must beat your own time while spotting galactic OSHA violations.</p>
+                <div class="project-media">
+                    Image / Video
+                </div>
+                <p class="project-description">
+                    Team Size: 2 people + a 5-person sound team
+                    <br />
+                    Length: 4 months
+                    <br />
+                    My Roles: Level Designer, Programmer
+                    <br />
+                    I programmed all primary game mechanics and designed 2 complete levels.
+                </p>
+                <a href="hyperdrift-hazard.html" class="see-more-btn internal-link">See more</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Proprietary Engine</h2>
+                <p class="project-tagline">Features added by me to an engine for USC's undergraduate "Programming Game Engines" course.</p>
+                <div class="project-media">Image / Video</div>
+                <p class="project-description">
+                    Features added:
+                    <br />
+                    - Different shaders using HLSL-- Phong, Lambert, Half-Lambert, Unlit, Toon
+                    <br />
+                    - Cohesive skeletal joint animation
+                    <br />
+                    - Character movement, materials, lighting, and other basics
+                </p>
+                <a href="proprietary-engine.html" class="see-more-btn internal-link">See more</a>
+            </article>
+        </section>-->
+
+        <section class="project-grid">
+            <article class="project-card">
+                <h2>Game Recreations</h2>
+                <p class="project-tagline">Programming in C++ of iconic video game titles using a proprietary engine that was provided by USC Games.</p>
+                <div class="project-media">
+                    <div class="media-hover contain">
+                        <img class="media-thumb" src="media/ITP380cover.png" alt="ITP380 thumbnail">
+                        <video src="media/ITP380covergif.mp4" muted loop playsinline preload="metadata"></video>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Programmed things such as:
+                    <br />
+                    - Mario Kart-style steering, camera movement, lap tracking, and enemy AI
+                    <br />
+                    - Portal-style portal mechanics, including rendering and physics
+                    <br />
+                    - 2D Zelda-style top-down movement, terrain modifications, and live enemy AI pathfinding
+                    <br />
+                    - Pac-man ghost AI and unique behaviors for all 4 ghosts
+                </p>
+                <a href="game-recreations.html" class="see-more-btn internal-link">See more</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Smooth-Talking Pickpocket</h2>
+                <p class="project-tagline">A split-screen narrative puzzle game where the player earns targets' trust while stealing from them.</p>
+                <div class="project-media">
+                    <div class="media-hover contain">
+                        <img class="media-thumb" src="media/STPPcover.png" alt="STPP thumbnail">
+                        <video src="media/STPPtrailer.webm" muted loop playsinline preload="metadata"></video>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Team Size: 60 people
+                    <br />
+                    Length: 3 months
+                    <br />
+                    My Roles: Programmer, Programming Mentor
+                    <br />
+                    - Worked on dialogue system
+                    <br />
+                    - Worked on pickpocket cursor-maze system
+                    <br />
+                    - Spearheaded implementation of overworld menu and day progression
+                    <br />
+                    - Mentored students in Unity and C#
+                </p>
+                <a href="smoothtalkingpickpocket.html" class="see-more-btn internal-link">See more</a>
+            </article>
+        </section>
+    </main>
+
+    <script src="programming.js"></script>
+</body>
+</html>
